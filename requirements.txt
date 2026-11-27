@@ -1,0 +1,10 @@
+# Versions recorded in results/run_summary.json (Python 3.13.16).
+# PyTorch 2.14.1+cu130 came with the Colab A100 runtime and is not pinned here.
+transformers==5.22.1
+mistral-common==1.13.1
+sentence-transformers==5.7.0
+numpy==2.4.6
+duckdb==1.3.2
+# Used by build_manifests.py and plot_results.py (versions not recorded)
+tiktoken
+matplotlib

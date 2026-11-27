@@ -1,0 +1,57 @@
+{
+  "audit_date": "2026-11-26",
+  "dataset": "theatticusproject/cuad-qa",
+  "dataset_revision": "1f61b0333e6d0bc676c913ad9386562a9348e06e",
+  "license_label_on_dataset_card": "CC BY 4.0",
+  "metadata_only_audit": true,
+  "splits": {
+    "train": {
+      "contracts": 408,
+      "questions": 22450,
+      "parquet_sha256": {
+        "0000.parquet": "0f0b3c241a3efbf7882465ab456d7bab0eae62d8526b3a52d9f36a4a56f42fa7",
+        "0001.parquet": "ec9b141749ae186ff10149530b77afe856264ab6c93db0f44c8e6048249e1305",
+        "0002.parquet": "dd06329e07dcb6202379d624430955ebc9d54ae3fb50af06dcda98d33c42d2be"
+      }
+    },
+    "test": {
+      "contracts": 102,
+      "questions": 4182,
+      "questions_per_contract": 41,
+      "answerable_questions": 1244,
+      "no_answer_questions": 2938,
+      "gold_answer_spans": 2643,
+      "gold_spans_matching_recorded_offsets": 2643,
+      "context_characters_median": 25657,
+      "context_characters_maximum": 300768,
+      "parquet_sha256": "f5ab125d0b96fa942d6e86b782e01feb5155f28a37684cbf7d1e260656c91130"
+    }
+  },
+  "periplus_overlap_check": {
+    "method": "Reproduced public selection rule from Periplus prepare_cuad.py: the ten longest CUAD contracts ranked with tiktoken encoding_for_model(gpt-4o).",
+    "contracts_selected_by_periplus": 10,
+    "selected_contracts_in_cuad_test_split": 2,
+    "selected_contracts_in_cuad_train_split": 8,
+    "excluded_from_our_samples": true
+  },
+  "frozen_samples": {
+    "confirmatory": {
+      "test_contracts": 30,
+      "questions": 1230,
+      "answerable_questions": 385,
+      "no_answer_questions": 845,
+      "contract_tokens_gpt4o_min_median_max": [428, 5306, 44431],
+      "selection_seed": 261126,
+      "manifest": "test_manifest.json"
+    },
+    "pilot": {
+      "train_contracts": 4,
+      "questions": 20,
+      "answerable_questions": 8,
+      "no_answer_questions": 12,
+      "question_selection": "Two answerable and three no-answer questions per contract.",
+      "manifest": "pilot_manifest.json"
+    }
+  },
+  "storage_note": "Parquet files were used from a temporary cache outside the project. Contract texts are not stored in this article folder."
+}

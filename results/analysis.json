@@ -1,0 +1,572 @@
+{
+  "validation": {
+    "manifest_question_count": 1230,
+    "result_question_count": 1230,
+    "result_row_count": 2460,
+    "complete_pairs": 1230,
+    "contract_count": 30,
+    "rows_per_contract": [
+      41
+    ],
+    "answerability_mismatches": 0,
+    "duplicate_rows": 0,
+    "all_scores_and_tokens_in_range": true,
+    "chunk_audit_max_tokens_including_specials": 483,
+    "embedding_limit_tokens": 512
+  },
+  "results_recomputed": {
+    "full_document": {
+      "all": {
+        "n": 1230,
+        "exact_match": 0.6682926829268293,
+        "token_f1": 0.7445467294179966
+      },
+      "answerable": {
+        "n": 385,
+        "exact_match": 0.03896103896103896,
+        "token_f1": 0.28257786281593705
+      },
+      "no_answer": {
+        "n": 845,
+        "exact_match": 0.9550295857988166,
+        "token_f1": 0.9550295857988166
+      },
+      "input_tokens": 13157509,
+      "output_tokens": 119582,
+      "price_equivalent_usd": 2.6554182000000015,
+      "mean_end_to_end_seconds": 6.25502815501461,
+      "median_end_to_end_seconds": 1.3098861405001117
+    },
+    "dense_rag": {
+      "all": {
+        "n": 1230,
+        "exact_match": 0.6707317073170732,
+        "token_f1": 0.7235794968042734
+      },
+      "answerable": {
+        "n": 385,
+        "exact_match": 0.02857142857142857,
+        "token_f1": 0.19740982095910703
+      },
+      "no_answer": {
+        "n": 845,
+        "exact_match": 0.9633136094674556,
+        "token_f1": 0.9633136094674556
+      },
+      "input_tokens": 3057801,
+      "output_tokens": 50005,
+      "price_equivalent_usd": 0.6215611999999999,
+      "mean_end_to_end_seconds": 2.234021540751223,
+      "median_end_to_end_seconds": 0.6157487569998921
+    }
+  },
+  "derived": {
+    "dense_rag_input_token_reduction_fraction": 0.7676003109707163,
+    "dense_rag_output_token_reduction_fraction": 0.5818350587881119,
+    "dense_rag_price_equivalent_reduction_fraction": 0.7659271899243594,
+    "answerable_token_f1_difference_dense_minus_full": -0.08516804185683002,
+    "answerable_token_f1_difference_contract_bootstrap_95_ci": [
+      -0.1103447886804285,
+      -0.05977412444815818
+    ],
+    "answerable_token_f1_by_method_contract_bootstrap_95_ci": {
+      "full_document": [
+        0.25577002786879055,
+        0.31245904244784084
+      ],
+      "dense_rag": [
+        0.16019006496008123,
+        0.2399331654412186
+      ]
+    },
+    "answerable_token_f1_noninferiority_margin": -0.05,
+    "passes_prespecified_quality_gate": false,
+    "output_cap_hit_counts": {
+      "max_new_tokens": 768,
+      "by_method_and_answerability": {
+        "full_document": {
+          "all": 74,
+          "answerable": 66,
+          "no_answer": 8
+        },
+        "dense_rag": {
+          "all": 10,
+          "answerable": 10,
+          "no_answer": 0
+        }
+      },
+      "question_pairs_with_either_method_at_cap": 77
+    },
+    "unclipped_answerable_sensitivity": {
+      "question_count": 316,
+      "dense_minus_full_token_f1_difference": -0.08718627733523249,
+      "contract_bootstrap_95_ci": [
+        -0.11620302167489159,
+        -0.05816647742260886
+      ],
+      "interpretation": "Diagnostic subset excluding an answerable question if either method reached the shared output limit; not a replacement for the primary analysis."
+    },
+    "dense_rag_answerable_max_gold_span_character_coverage_mean": 0.5530923624272801,
+    "price_equivalent_delta_usd": 2.0338570000000016,
+    "price_equivalent_is_not_an_api_invoice": true
+  },
+  "question_order_cost_curve": {
+    "random_orders_per_contract": 20,
+    "seed": 261126,
+    "curve_rows": [
+      {
+        "questions_per_contract": 0,
+        "full_document_median_usd": 0.0,
+        "dense_rag_median_usd": 0.0,
+        "full_document_p05_usd": 0.0,
+        "full_document_p95_usd": 0.0,
+        "dense_rag_p05_usd": 0.0,
+        "dense_rag_p95_usd": 0.0,
+        "share_contract_orders_rag_cheaper": null
+      },
+      {
+        "questions_per_contract": 1,
+        "full_document_median_usd": 0.0011688,
+        "dense_rag_median_usd": 0.000536,
+        "full_document_p05_usd": 0.000195,
+        "full_document_p95_usd": 0.00661017,
+        "dense_rag_p05_usd": 0.0002098,
+        "dense_rag_p95_usd": 0.00059189,
+        "share_contract_orders_rag_cheaper": 0.8633333333333333
+      },
+      {
+        "questions_per_contract": 2,
+        "full_document_median_usd": 0.0023544000000000004,
+        "dense_rag_median_usd": 0.0010768000000000002,
+        "full_document_p05_usd": 0.00039237,
+        "full_document_p95_usd": 0.013187099999999998,
+        "dense_rag_p05_usd": 0.00042199999999999996,
+        "dense_rag_p95_usd": 0.00117784,
+        "share_contract_orders_rag_cheaper": 0.8683333333333333
+      },
+      {
+        "questions_per_contract": 3,
+        "full_document_median_usd": 0.0035341,
+        "dense_rag_median_usd": 0.0016221999999999999,
+        "full_document_p05_usd": 0.00058895,
+        "full_document_p95_usd": 0.019854359999999998,
+        "dense_rag_p05_usd": 0.00063359,
+        "dense_rag_p95_usd": 0.0017600100000000002,
+        "share_contract_orders_rag_cheaper": 0.8683333333333333
+      },
+      {
+        "questions_per_contract": 4,
+        "full_document_median_usd": 0.004722499999999999,
+        "dense_rag_median_usd": 0.0021617,
+        "full_document_p05_usd": 0.0007869400000000001,
+        "full_document_p95_usd": 0.026472549999999997,
+        "dense_rag_p05_usd": 0.0008473399999999999,
+        "dense_rag_p95_usd": 0.00233444,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 5,
+        "full_document_median_usd": 0.0058948,
+        "dense_rag_median_usd": 0.0027069,
+        "full_document_p05_usd": 0.0009883700000000001,
+        "full_document_p95_usd": 0.033056699999999994,
+        "dense_rag_p05_usd": 0.00106412,
+        "dense_rag_p95_usd": 0.00290746,
+        "share_contract_orders_rag_cheaper": 0.87
+      },
+      {
+        "questions_per_contract": 6,
+        "full_document_median_usd": 0.007066800000000001,
+        "dense_rag_median_usd": 0.0032529000000000004,
+        "full_document_p05_usd": 0.0011850900000000002,
+        "full_document_p95_usd": 0.039736280000000006,
+        "dense_rag_p05_usd": 0.00127395,
+        "dense_rag_p95_usd": 0.0034884100000000004,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 7,
+        "full_document_median_usd": 0.0082637,
+        "dense_rag_median_usd": 0.0037942,
+        "full_document_p05_usd": 0.00138294,
+        "full_document_p95_usd": 0.046316130000000004,
+        "dense_rag_p05_usd": 0.0014958200000000001,
+        "dense_rag_p95_usd": 0.00406692,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 8,
+        "full_document_median_usd": 0.0094383,
+        "dense_rag_median_usd": 0.0043327999999999995,
+        "full_document_p05_usd": 0.00158999,
+        "full_document_p95_usd": 0.05296125,
+        "dense_rag_p05_usd": 0.0017105200000000003,
+        "dense_rag_p95_usd": 0.00464903,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 9,
+        "full_document_median_usd": 0.0106108,
+        "dense_rag_median_usd": 0.0048722,
+        "full_document_p05_usd": 0.0017851700000000004,
+        "full_document_p95_usd": 0.05960766000000001,
+        "dense_rag_p05_usd": 0.00192209,
+        "dense_rag_p95_usd": 0.005224050000000001,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 10,
+        "full_document_median_usd": 0.011771799999999999,
+        "dense_rag_median_usd": 0.005413899999999999,
+        "full_document_p05_usd": 0.0019842,
+        "full_document_p95_usd": 0.06624941000000001,
+        "dense_rag_p05_usd": 0.0021467300000000003,
+        "dense_rag_p95_usd": 0.00580062,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 11,
+        "full_document_median_usd": 0.0129349,
+        "dense_rag_median_usd": 0.005952799999999999,
+        "full_document_p05_usd": 0.00218016,
+        "full_document_p95_usd": 0.07290251,
+        "dense_rag_p05_usd": 0.00235693,
+        "dense_rag_p95_usd": 0.00638061,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 12,
+        "full_document_median_usd": 0.0141173,
+        "dense_rag_median_usd": 0.0064875,
+        "full_document_p05_usd": 0.0023739900000000003,
+        "full_document_p95_usd": 0.07952812000000001,
+        "dense_rag_p05_usd": 0.00256673,
+        "dense_rag_p95_usd": 0.00695541,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 13,
+        "full_document_median_usd": 0.0152874,
+        "dense_rag_median_usd": 0.0070385000000000005,
+        "full_document_p05_usd": 0.00257213,
+        "full_document_p95_usd": 0.08620697,
+        "dense_rag_p05_usd": 0.002779780000000001,
+        "dense_rag_p95_usd": 0.00752995,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 14,
+        "full_document_median_usd": 0.016474700000000002,
+        "dense_rag_median_usd": 0.007585799999999999,
+        "full_document_p05_usd": 0.00277725,
+        "full_document_p95_usd": 0.09283705,
+        "dense_rag_p05_usd": 0.0029926799999999997,
+        "dense_rag_p95_usd": 0.008105010000000003,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 15,
+        "full_document_median_usd": 0.017657600000000002,
+        "dense_rag_median_usd": 0.0081352,
+        "full_document_p05_usd": 0.002981310000000001,
+        "full_document_p95_usd": 0.09944690999999999,
+        "dense_rag_p05_usd": 0.0032124799999999998,
+        "dense_rag_p95_usd": 0.00867776,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 16,
+        "full_document_median_usd": 0.0188168,
+        "dense_rag_median_usd": 0.008679800000000001,
+        "full_document_p05_usd": 0.0031760800000000013,
+        "full_document_p95_usd": 0.10608450999999998,
+        "dense_rag_p05_usd": 0.00342504,
+        "dense_rag_p95_usd": 0.009257030000000001,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 17,
+        "full_document_median_usd": 0.019983100000000004,
+        "dense_rag_median_usd": 0.009223000000000002,
+        "full_document_p05_usd": 0.003372410000000001,
+        "full_document_p95_usd": 0.11274975,
+        "dense_rag_p05_usd": 0.00363924,
+        "dense_rag_p95_usd": 0.009832500000000004,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 18,
+        "full_document_median_usd": 0.021148800000000002,
+        "dense_rag_median_usd": 0.0097588,
+        "full_document_p05_usd": 0.003566400000000001,
+        "full_document_p95_usd": 0.11935428,
+        "dense_rag_p05_usd": 0.0038507,
+        "dense_rag_p95_usd": 0.01041331,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 19,
+        "full_document_median_usd": 0.022328200000000006,
+        "dense_rag_median_usd": 0.010306099999999999,
+        "full_document_p05_usd": 0.003762400000000001,
+        "full_document_p95_usd": 0.12597595,
+        "dense_rag_p05_usd": 0.00406397,
+        "dense_rag_p95_usd": 0.01098853,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 20,
+        "full_document_median_usd": 0.023488400000000006,
+        "dense_rag_median_usd": 0.010853600000000001,
+        "full_document_p05_usd": 0.00395906,
+        "full_document_p95_usd": 0.13257015,
+        "dense_rag_p05_usd": 0.004274430000000001,
+        "dense_rag_p95_usd": 0.0115614,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 21,
+        "full_document_median_usd": 0.024652300000000002,
+        "dense_rag_median_usd": 0.0114012,
+        "full_document_p05_usd": 0.004153960000000001,
+        "full_document_p95_usd": 0.13920899000000003,
+        "dense_rag_p05_usd": 0.00448574,
+        "dense_rag_p95_usd": 0.012136779999999998,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 22,
+        "full_document_median_usd": 0.0258501,
+        "dense_rag_median_usd": 0.011940000000000001,
+        "full_document_p05_usd": 0.004357470000000001,
+        "full_document_p95_usd": 0.14590276,
+        "dense_rag_p05_usd": 0.0047025,
+        "dense_rag_p95_usd": 0.012713410000000001,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 23,
+        "full_document_median_usd": 0.027009400000000003,
+        "dense_rag_median_usd": 0.0124802,
+        "full_document_p05_usd": 0.004554769999999999,
+        "full_document_p95_usd": 0.15250843,
+        "dense_rag_p05_usd": 0.00492208,
+        "dense_rag_p95_usd": 0.013286830000000001,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 24,
+        "full_document_median_usd": 0.028243200000000003,
+        "dense_rag_median_usd": 0.013022600000000002,
+        "full_document_p05_usd": 0.004749800000000002,
+        "full_document_p95_usd": 0.15916180000000002,
+        "dense_rag_p05_usd": 0.005135379999999999,
+        "dense_rag_p95_usd": 0.013850740000000002,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 25,
+        "full_document_median_usd": 0.029446899999999998,
+        "dense_rag_median_usd": 0.013561500000000002,
+        "full_document_p05_usd": 0.0049467999999999995,
+        "full_document_p95_usd": 0.16579485999999996,
+        "dense_rag_p05_usd": 0.0053515299999999984,
+        "dense_rag_p95_usd": 0.014433239999999998,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 26,
+        "full_document_median_usd": 0.030607000000000002,
+        "dense_rag_median_usd": 0.0141021,
+        "full_document_p05_usd": 0.005141030000000001,
+        "full_document_p95_usd": 0.17242537999999993,
+        "dense_rag_p05_usd": 0.00556012,
+        "dense_rag_p95_usd": 0.015012429999999998,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 27,
+        "full_document_median_usd": 0.031766600000000006,
+        "dense_rag_median_usd": 0.0146411,
+        "full_document_p05_usd": 0.005341410000000001,
+        "full_document_p95_usd": 0.17907003999999996,
+        "dense_rag_p05_usd": 0.005770949999999998,
+        "dense_rag_p95_usd": 0.015588190000000002,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 28,
+        "full_document_median_usd": 0.0329303,
+        "dense_rag_median_usd": 0.0151805,
+        "full_document_p05_usd": 0.0055366600000000005,
+        "full_document_p95_usd": 0.18573225000000002,
+        "dense_rag_p05_usd": 0.005984139999999998,
+        "dense_rag_p95_usd": 0.016170870000000004,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 29,
+        "full_document_median_usd": 0.0340882,
+        "dense_rag_median_usd": 0.0157275,
+        "full_document_p05_usd": 0.00573479,
+        "full_document_p95_usd": 0.19235539,
+        "dense_rag_p05_usd": 0.006196590000000001,
+        "dense_rag_p95_usd": 0.016748419999999997,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 30,
+        "full_document_median_usd": 0.0352478,
+        "dense_rag_median_usd": 0.0162652,
+        "full_document_p05_usd": 0.005932710000000001,
+        "full_document_p95_usd": 0.19896020000000003,
+        "dense_rag_p05_usd": 0.006413659999999999,
+        "dense_rag_p95_usd": 0.017318,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 31,
+        "full_document_median_usd": 0.03640700000000001,
+        "dense_rag_median_usd": 0.016803400000000003,
+        "full_document_p05_usd": 0.00612878,
+        "full_document_p95_usd": 0.20556931999999997,
+        "dense_rag_p05_usd": 0.00662514,
+        "dense_rag_p95_usd": 0.01789353,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 32,
+        "full_document_median_usd": 0.0376142,
+        "dense_rag_median_usd": 0.0173454,
+        "full_document_p05_usd": 0.00632553,
+        "full_document_p95_usd": 0.21223844000000003,
+        "dense_rag_p05_usd": 0.006839089999999998,
+        "dense_rag_p95_usd": 0.018484849999999994,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 33,
+        "full_document_median_usd": 0.038775,
+        "dense_rag_median_usd": 0.017888700000000007,
+        "full_document_p05_usd": 0.0065201700000000005,
+        "full_document_p95_usd": 0.21886866999999996,
+        "dense_rag_p05_usd": 0.007048569999999999,
+        "dense_rag_p95_usd": 0.019056620000000003,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 34,
+        "full_document_median_usd": 0.0399365,
+        "dense_rag_median_usd": 0.018422900000000002,
+        "full_document_p05_usd": 0.0067238,
+        "full_document_p95_usd": 0.2254930099999999,
+        "dense_rag_p05_usd": 0.007258459999999999,
+        "dense_rag_p95_usd": 0.019636880000000002,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 35,
+        "full_document_median_usd": 0.0411035,
+        "dense_rag_median_usd": 0.0189622,
+        "full_document_p05_usd": 0.006926389999999999,
+        "full_document_p95_usd": 0.23216007999999996,
+        "dense_rag_p05_usd": 0.0074842799999999985,
+        "dense_rag_p95_usd": 0.020226760000000003,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 36,
+        "full_document_median_usd": 0.042341000000000004,
+        "dense_rag_median_usd": 0.019497200000000003,
+        "full_document_p05_usd": 0.007127409999999999,
+        "full_document_p95_usd": 0.2387597199999999,
+        "dense_rag_p05_usd": 0.007695769999999999,
+        "dense_rag_p95_usd": 0.020811220000000002,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 37,
+        "full_document_median_usd": 0.04349990000000001,
+        "dense_rag_median_usd": 0.0200414,
+        "full_document_p05_usd": 0.007328790000000001,
+        "full_document_p95_usd": 0.24544078,
+        "dense_rag_p05_usd": 0.007912120000000002,
+        "dense_rag_p95_usd": 0.02138567,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 38,
+        "full_document_median_usd": 0.04469070000000001,
+        "dense_rag_median_usd": 0.0205685,
+        "full_document_p05_usd": 0.007525509999999999,
+        "full_document_p95_usd": 0.25203967999999993,
+        "dense_rag_p05_usd": 0.008125120000000001,
+        "dense_rag_p95_usd": 0.021979220000000008,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 39,
+        "full_document_median_usd": 0.0458509,
+        "dense_rag_median_usd": 0.021108100000000005,
+        "full_document_p05_usd": 0.00772119,
+        "full_document_p95_usd": 0.25864457,
+        "dense_rag_p05_usd": 0.008337709999999998,
+        "dense_rag_p95_usd": 0.02255537,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 40,
+        "full_document_median_usd": 0.047049200000000006,
+        "dense_rag_median_usd": 0.021655800000000003,
+        "full_document_p05_usd": 0.007916160000000002,
+        "full_document_p95_usd": 0.26534185999999993,
+        "dense_rag_p05_usd": 0.00854959,
+        "dense_rag_p95_usd": 0.023139440000000004,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      },
+      {
+        "questions_per_contract": 41,
+        "full_document_median_usd": 0.04828450000000001,
+        "dense_rag_median_usd": 0.022182600000000004,
+        "full_document_p05_usd": 0.0081118,
+        "full_document_p95_usd": 0.271953,
+        "dense_rag_p05_usd": 0.008760800000000001,
+        "dense_rag_p95_usd": 0.023721,
+        "share_contract_orders_rag_cheaper": 0.8666666666666667
+      }
+    ],
+    "contract_order_first_crossing_question_count_median_when_crossed": 1,
+    "contract_order_first_crossing_question_count_p05_p95_when_crossed": [
+      1.0,
+      1.0
+    ],
+    "contract_orders_with_any_crossing": 523,
+    "contract_orders_with_any_crossing_fraction": 0.8716666666666667,
+    "contract_order_sustained_crossing_question_count_median": 1.0,
+    "contract_order_sustained_crossing_p05_p95": [
+      1.0,
+      1.0
+    ],
+    "contract_orders_with_sustained_crossing": 520,
+    "contract_orders_with_sustained_crossing_fraction": 0.8666666666666667,
+    "contract_orders_with_no_crossing_by_final_question": 77,
+    "contract_order_paths_rag_cheaper_at_question_1_fraction": 0.8633333333333333,
+    "contract_order_paths_rag_cheaper_at_question_41_fraction": 0.8666666666666667,
+    "interpretation": "Order variability across sampled questions, not a confidence interval. Local index build time and storage are excluded from these token-price curves."
+  },
+  "reported_run_summary_matches_recomputed_totals": {
+    "dense_rag_price_equivalent": true,
+    "full_document_price_equivalent": true
+  },
+  "local_index_measurements": {
+    "index_build_seconds_across_30_contracts": 4.2247,
+    "index_vector_bytes": 1127424,
+    "index_text_bytes": 1675753,
+    "combined_vector_plus_text_payload_bytes": 2803177,
+    "average_index_build_seconds_per_contract": 0.14082333333333336,
+    "mean_per_question_end_to_end_seconds_saved_by_rag": 4.021006614263387,
+    "mean_latency_break_even_questions_using_average_build_and_saved_time": 0.035021910392736555,
+    "per_contract_mean_latency_savings_seconds_median": 2.840859380109683,
+    "note": "Payload is raw vectors plus chunk text; it excludes Python/object and vector-index metadata. Retrieval is exact NumPy cosine scanning, not an ANN index."
+  }
+}
